@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/css/QR.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div id="imgBox">
+            <div style="display: flex; justify-content: center">
+                <h2><span id="selected-price"></span></h2>
+            </div>
+            <img src="" id="qrImage">
+        </div>
+        <button onclick="generateQR()">Generate QR Code</button>
+    </div>
+
+    <script>
+        function generateQR() {
+            let qrImage = document.getElementById("qrImage");
+            let qrData = "YourDataHere"; // Replace "YourDataHere" with the data you want to encode
+            let qrSize = 150;
+            qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${qrData}`;
+        }
+
+        window.onload = function () {
+            // Get the price parameter from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var price = urlParams.get('price');
+
+            // Log the retrieved price to the console for debugging
+            console.log("Retrieved Price:", price);
+
+            // Display the price in an element with id "selected-price"
+            document.getElementById('selected-price').textContent = price; // Use lowercase "price"
+        };
+    </script>
+</body>
+
+</html>

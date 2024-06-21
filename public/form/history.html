@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .list-group-item:nth-child(4n+1) {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Transaction History</h1>
+        <ul id="historyList" class="list-group"></ul>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage
+        var jsonData = JSON.parse(localStorage.getItem('history'));
+
+        // Display JSON data as a list on the page
+        var historyListElement = document.getElementById('historyList');
+        for (var i = 0; i < jsonData.length; i++) {
+            var historyData = jsonData[i];
+            for (var key in historyData) {
+                if (historyData.hasOwnProperty(key)) {
+                    var listItem = document.createElement('li');
+                    listItem.className = 'list-group-item';
+                    listItem.innerText = key + ': ' + historyData[key];
+                    historyListElement.appendChild(listItem);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

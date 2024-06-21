@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    background-color: #0B2447;
+    padding: 10px;
+    display: flex;
+    z-index: 1; /* Menempatkan header di atas konten */
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #BACDDB;
+    max-width: 100%;
+    padding-top: 80px; /* Memberikan jarak antara header dan konten */
+  }
+
+  header .pembayaran {
+    display: flex;
+    position: relative;
+  }
+
+  .pembayaran {
+    display: flex;
+    align-items: center;
+  }
+
+  .pembayaran .left {
+    justify-content: flex-start;
+  }
+
+  header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    color: rgb(255, 255, 255); /* Mengubah warna teks header menjadi putih */
+  }
+
+  h3 {
+    padding-left: 10px;
+    display: block;
+  }
+
+  .bayar {
+    padding-left: 10px;
+  }
+
+  /* Gaya default */
+#pembayaran h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Aturan media queries untuk layar dengan lebar kurang dari 768px */
+@media screen and (max-width: 767px) {
+  #pembayaran h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+}
+
+/* Aturan media queries untuk layar dengan lebar kurang dari 480px */
+@media screen and (max-width: 479px) {
+  #pembayaran h2 {
+    font-size: 24px;
+    text-align: left;
+  }
+}

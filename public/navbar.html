@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css"> 
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Gambar/Logo Velkhana Store.png" width="120px" />
+      </div>
+      <div class="velkhana">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      velkhana = document.querySelector(".velkhana");
+      velkhana.onclick = function () {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+      };
+    </script>
+
+        <!--Slidshow-->
+    <div class="main">
+      <div class="Promo">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="Gambar/1.png" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="Gambar/2.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Gambar/3.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Gambar/4.png" style="width: 100%" />
+          </div>
+        </div>
+
+        <div style="text-align: center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+      </script>
+            <!--popup-->
+      <div class="container">
+        <button id="close">&times;</button>
+        <img src="Gambar/2.png" />
+      </div>
+      <script src="script.js"></script>
+      <div class="placeholder" style="align-items: center">
+        <span class="Pilih-product" style="text-align: center"
+          >Our Product</span
+        >
+      </div>
+      <div id="product-section">
+        <div class="content-main">
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(1)"
+            >
+              <img src="Gambar/valorant1.jpg" alt="Product Image" />
+              <h3>Valorant</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(2)"
+            >
+              <img src="Gambar/honkai.jpeg" alt="Product Image" />
+              <h3>Honkai: Star Rail</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="formML.html"
+              style="text-decoration: none"
+              onclick="showProductDetail(3)"
+            >
+              <img src="Gambar/ml.webp" alt="Product Image" />
+              <h3>Mobile Legends: Bang Bang</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(4)"
+            >
+              <img src="Gambar/stumble.jpeg" alt="Product Image" />
+              <h3>Stumble Guys</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(5)"
+            >
+              <img src="Gambar/pubg.jpg" alt="Product Image" />
+              <h3>PUBG: Battlegrounds</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(6)"
+            >
+              <img src="Gambar/genshin.jpg" alt="Product Image" />
+              <h3>Genshin Impact</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(7)"
+            >
+              <img src="Gambar/firefree.jpeg" alt="Product Image" />
+              <h3>Free Fire</h3>
+            </a>
+          </div>
+
+          <div class="product-tile">
+            <a
+              href="#"
+              style="text-decoration: none"
+              onclick="showProductDetail(8)"
+            >
+              <img src="Gambar/arknights.jpg" alt="Product Image" />
+              <h3>Arknights</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="time.js"></script>
+
+
+    <!--footer-->
+    <div id="contact">
+    <footer class="footer">
+      <div class="footer-left">
+        <h3>Payment Method</h3>
+        <div class="online-payment">
+          <img src="Gambar/dana.png" alt="" />
+          <img src="Gambar/gopay.png" alt="" />
+          <img src="Gambar/telkomsel.webp" alt="" />
+          <img src="Gambar/trii.jpeg" alt="" />
+        </div>
+        <br />
+        <a href="#" class="syarat">Syarat & Ketentuan</a>
+        <a href="#" class="kebijakan">Kebijakan Privasi</a>
+        <p class="hakcipta">&copy; Hak Cipta Velkhana Payments</p>
+        <p class="footer-copyright">2023 Velkhana Store</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Indonesia</span> Depok, Jawa Barat</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+62 823-3406-4668</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#">velkhanastore@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-about">
+          <span>About</span>
+          Velkhana Store melayani jasa pembelian top up berbagai game. velkhana
+          store buka dari pukul 08.00 sampai pukul 11.00. proses akan diproses
+          setelah pembayaran berlangsung dengan method payment yang ada.
+          velkhana store adalah top up game termurah, aman dan terpecaya.
+        </p>
+
+        <div class="footer-media">
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>

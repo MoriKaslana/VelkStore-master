@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Gambar/mlbb.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/Form/Valo.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Valorant</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .scrollable {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+
+
+
+        #scrollbar2::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        #scrollbar2::-webkit-scrollbar-track {
+            background-color: transparent;
+            border: 1.5px solid #7e7e7e;
+            border-radius: 8px;
+        }
+
+        #scrollbar2::-webkit-scrollbar-thumb {
+            background-color: #f1f1f1;
+            border: 2px solid #616161;
+            border-radius: 8px;
+        }
+
+        article,
+        aside,
+        dialog,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section {
+            display: block;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background: #0b2447;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Gambar/Logo Velkhana Store.png" width="120px" />
+        </div>
+        <div class="velkhana">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar" style="z-index: 1000;">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#" class="active">Product</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <script>
+            velkhana = document.querySelector(".velkhana");
+            velkhana.onclick = function () {
+                navBar = document.querySelector(".nav-bar");
+                navBar.classList.toggle("active");
+            };
+        </script>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="scrollable scrollbar" id="scrollbar2">
+                    <div style="display: flex; align-items: center; gap: 10px">
+                        <h4>Valorant</h4>
+                        <img src="../Gambar/valorant-logo-FAB2CA0E55-seeklogo.com.png" alt="mlbanner" width="50px"
+                            style="border-radius: 20px" />
+                    </div>
+                    <h4>Top up Valorant is now even easier with
+                      Velkhana Store! You can use it to buy valorant point with the cheapest price you can get, 
+                      buy your favorite favorite skin. Just enter
+                      your ID, choose a nominal value and make a payment.<br><br>
+                      Velkhana Store also provides a wide selection of payment
+                      methods for Valorant top ups which makes the process of buying
+                      Valorant Points easy. You can easily use your E-wallet or credit
+                      balance to complete the transaction process. Top up Valorant Points
+                      can also be done without registration, credit card
+                      and without having to log in.<br><br>
+                        <strong>About Valorant</strong> <br>
+                        Released in 2020, Valorant is  a free-to-play first-person tactical hero shooter developed and published by Rigot Games,
+                        for Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020.</h4>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <form onsubmit="validateForm()" id="myForm">
+                    <h4>Top Up</h4>
+                    <div class="form-group">
+                        <input type="text" id="accid" name="accid" class="form-control" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <select name="jumlah" id="diamonds">
+                            <option value="5">15 Valorant Point</option>
+                            <option value="11">375 Valorant Point</option>
+                            <option value="17">420 Valorant Point</option>
+                            <option value="25">700 Valorant Point</option>
+                            <option value="33">795 Valorant Point</option>
+                            <option value="154">1375 Valorant Point</option>
+                            <option value="256">2400 Valorant Point</option>
+                            <option value="333">280 Valorant Point</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="platform" id="platform">
+                            <option value="">Select Payment</option>
+                            <optgroup label="Token">
+                                <option value="Telkomsel">Telkomsel</option>
+                                <option value="Indosat">Indosat</option>
+                            </optgroup>
+                            <optgroup label="E-Wallet">
+                                <option value="qris">Q-RIS</option>
+                                <option value="dana">DANA</option>
+                                <option value="gopay">GO-PAY</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div id="price"></div>
+                    <div class="form-group">
+
+                        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" value="clear" class="btn btn-secondary">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div id="contact">
+        <footer class="footer">
+            <div class="footer-left">
+                <h3>Payment Method</h3>
+                <div class="online-payment">
+                    <img src="../Gambar/dana.png" alt="" />
+                    <img src="../Gambar/gopay.png" alt="" />
+                    <img src="../Gambar/telkomsel.webp" alt="" />
+                    <img src="../Gambar/trii.jpeg" alt="" />
+                </div>
+                <br />
+                <a href="#" class="syarat">Syarat & Ketentuan</a>
+                <a href="#" class="kebijakan">Kebijakan Privasi</a>
+                <p class="hakcipta">&copy; Hak Cipta Velkhana Payments</p>
+                <p class="footer-copyright">2023 Velkhana Store</p>
+            </div>
+
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Indonesia</span> Depok, Jawa Barat</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+62 823-3406-4668</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">velkhanastore@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p class="footer-about">
+                    <span>About</span>
+                    Velkhana Store melayani jasa pembelian top up berbagai game. velkhana
+                    store buka dari pukul 08.00 sampai pukul 11.00. proses akan diproses
+                    setelah pembayaran berlangsung dengan method payment yang ada.
+                    velkhana store adalah top up game termurah, aman dan terpecaya.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('#myForm').submit(function (event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+
+                // Get form data
+                var formData = {
+                    accid: $('input[name=accid]').val(),
+                    email: $('input[name=email]').val(),
+                    jumlah: $('select[name=jumlah]').val(),
+                    platform: $('select[name=platform]').val()
+                };
+
+                // Get existing data from local storage
+                var existingData = localStorage.getItem('history');
+                existingData = existingData ? JSON.parse(existingData) : [];
+
+                // Append the new form data to existing data
+                existingData.push(formData);
+
+                // Store the updated data in local storage
+                localStorage.setItem('history', JSON.stringify(existingData));
+
+                console.log('Form data stored in local storage:', formData);
+                // You can add any additional actions here after storing the form data
+            });
+        });
+    </script>
+
+    <script>
+        function validateForm() {
+    var accid = document.forms[0]["accid"].value;
+    var email = document.forms[0]["email"].value;
+    var jumlah = document.forms[0]["jumlah"].value;
+    var platform = document.forms[0]["platform"].value;
+    var price = document.getElementById('price').textContent;
+
+    var formIsValid = true; // Variabel penanda validasi formulir
+
+    if (accid === "") {
+        alert("Account ID must be filled");
+        formIsValid = false; // Form tidak valid
+    }
+    if (email === "") {
+        alert("Email must be filled");
+        formIsValid = false; // Form tidak valid
+    }
+    if (jumlah === "") {
+        alert("Quantity must be selected");
+        formIsValid = false; // Form tidak valid
+    }
+    if (platform === "") {
+        alert("Platform must be selected");
+        formIsValid = false; // Form tidak valid
+    }
+
+    if (formIsValid) { // Jika formulir valid
+        if (platform === "qris") {
+            // Pass the selected price as a query parameter in the URL
+            window.location.href = "QRPayment.html?price=" + price;
+            return false; // Prevent form submission
+        }
+        alert("Thanks For Ordering");
+        return true; // Izinkan pengiriman formulir
+    } else {
+        return false; // Form tidak valid, jangan kirim formulir
+    }
+}
+    </script>
+
+    <script>
+        const selectElement = document.getElementById('diamonds');
+        const priceDisplay = document.getElementById('price');
+
+        selectElement.addEventListener('change', function () {
+            const selectedValue = selectElement.value;
+            const prices = {
+                5: 'Price: Rp 13.542',
+                11: 'Price: Rp 40.624',
+                17: 'Price: Rp 45.136',
+                25: 'Price: Rp 72.217',
+                33: 'Price: Rp 85.759',
+                154: 'Price: Rp 135.406',
+                256: 'Price: Rp 225.676',
+                333: 'Price: Rp 270.811'
+            };
+
+            priceDisplay.textContent = prices[selectedValue];
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
